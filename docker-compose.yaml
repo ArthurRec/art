@@ -1,0 +1,21 @@
+version: '3.7'
+
+services:
+  web:
+    container_name: art
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    ports:
+      - 8000:8000
+    depends_on:
+      - art-db
+
+  db:
+    image: postgres:12-alpine
+    container_name: art-db
+    env_file: ./.env
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+
+volumes:
+  postgres_data:

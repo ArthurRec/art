@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+{{block.super}}
+  
+{#<title>{{}}</title>#}
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+    {%for balance in balance%}
+<div class="well" style="float: right; margin-top: 170px; margin-right: 300px">
+<div class="">
+<h5 style="float: left; margin-left: 20px; font-size: 30px; font-weight: bold; margin-top: -1px">
+    {{balance.user.email}}</h5>
+<i class="fa fa-gear" style="font-size:24px; float: right;  margin-left: 30px"></i>
+<a style="" href="{% url 'upload_balance'%}"><button class="btn btn-primary" style="background-color: #EEEEEE; color: black; float: right; margin-left: 30px; height: 30px">Edit Balance</button></a>
+</div>
+             
+<hr>
+<ul>
+</div>
+
+</div>
+</div>
+
+{% endblock %}

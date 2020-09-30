@@ -1,0 +1,17 @@
+psycopg2-binary
+django
+djangorestframework
+requests
+statsmodels
+scipy
+django-semanticui-forms
+confusable-homoglyphs==3.0.0
+dj-database-url==0.5.0
+django-bootstrap3==9.1.0
+django-registration
+django-tinymce==2.7.0
+gunicorn==19.7.1
+python-decouple==3.1
+
+pytz==2018.4
+whitenoise==3.3.1

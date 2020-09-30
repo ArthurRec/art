@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+{{ block.super }}
+
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+	{% for pic in pic_posts%}
+<div class="row">
+	<div class="col-md-3">
+<div class="w3-container">
+
+  <div class="w3-card-4" style="width:40%;height: 400px">
+
+    <div class="w3-container w3-center">
+      <h3>Transactions</h3>
+      <img src="{{pic.pic.url}}" alt="Avatar" style="width:70%; height: 200px">
+      <h5>Client</h5>
+
+      <div class="w3-section">
+             <a href="{% url 'upload_profile' %} "><button class="w3-button w3-green">Transactions</button>
+        <a href="{% url 'upload_profile' %} "><button class="w3-button w3-green">Attachments</button>
+
+      </div>
+      <div class="w3-section">
+             <a href="{% url 'upload_profile' %} "><button class="w3-button w3-red">Phone number</button>
+       
+        	
+      </div>
+    </div>
+
+  </div>
+</div>
+</div>
+</div>
+</a>
+
+<br>
+{% endfor %}
+
+</body>
+</html>
+<style type="text/css">
+	body{
+		background-color: #EEEEEE
+	}
+</style>
+ 
+
+{% endblock %}
